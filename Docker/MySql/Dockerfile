@@ -1,0 +1,8 @@
+FROM mysql:latest AS mimysqlcom
+
+EXPOSE 3306
+
+VOLUME /var/lib/mysql
+
+ENV MYSQL_ROOT_PASSWORD 123456
+ENV MYSQL_DATABASE retoRefac

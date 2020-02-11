@@ -38,4 +38,13 @@ class FeatureContext extends RawMinkContext implements Context, SnippetAccepting
 
         file_put_contents('scrapped_references.txt', join(PHP_EOL, $links));
     }
+
+    /**
+     * @Then I take a screenshot
+     */
+    public function iTakeAScreenshot()
+    {
+        throw new PendingException();
+    }
+
 }

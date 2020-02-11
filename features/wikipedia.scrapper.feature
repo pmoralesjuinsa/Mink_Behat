@@ -22,3 +22,6 @@ Feature: Scrap behat references from wikipedia
       Then I should see "Bienvenidos"
       When I follow "Primeros pasos"
       Then I should see "Introducción a Wikipedia"
+      When I follow "Imágenes"
+      And print current URL
+      Then I take a screenshot

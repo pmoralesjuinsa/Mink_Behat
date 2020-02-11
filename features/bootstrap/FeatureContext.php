@@ -44,7 +44,11 @@ class FeatureContext extends RawMinkContext implements Context, SnippetAccepting
      */
     public function iTakeAScreenshot()
     {
-        throw new PendingException();
+        try {
+            file_put_contents('/tmp/test.png', $this->getSession()->getDriver()->getScreenshot());
+        } catch (Exception $exception) {
+            throw new \Exception();
+        }
     }
 
 }

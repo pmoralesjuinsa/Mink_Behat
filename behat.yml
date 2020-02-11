@@ -1,6 +1,9 @@
 default:
     suites:
       default:
+        routing:
+          mink_session: goutte
+          mink_javascript_session: selenium2
         contexts:
           - FeatureContext
           - Behat\MinkExtension\Context\MinkContext
@@ -8,12 +11,20 @@ default:
     extensions:
       Behat\MinkExtension:
         base_url: http://en.wikipedia.org
-        default_session: goutte
+        goutte: ~
         javascript_session: selenium2
 
         sessions:
-          goutte:
+          default:
             goutte: ~
           selenium2:
             selenium2:
-              wd_host: "http://127.0.0.1:4444/wd/hub"
+              wd_host: "http://172.19.0.4:5555/wd/hub"
+
+        browser_name: chrome
+
+
+firefox:
+  extensions:
+    Behat\MinkExtension:
+      browser_name: firefox

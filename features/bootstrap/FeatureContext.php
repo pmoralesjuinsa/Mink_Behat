@@ -1,19 +1,18 @@
 <?php
 
-use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\Context;
 use Behat\MinkExtension\Context\RawMinkContext;
-use Behat\Behat\Context\SnippetAcceptingContext;
-use Behat\Mink\Driver\Selenium2Driver;
+
 
 /**
  * Defines application features from the specific context.
  */
-class FeatureContext extends RawMinkContext implements Context, SnippetAcceptingContext
+class FeatureContext extends RawMinkContext implements Context
 {
 
     public function __construct()
     {
+
     }
 
 
@@ -45,14 +44,10 @@ class FeatureContext extends RawMinkContext implements Context, SnippetAccepting
      */
     public function iTakeAScreenshot()
     {
-        try {
-            $image_data = $this->getSession()->getDriver()->getScreenshot();
-            $file_and_path = '/tmp/'.strtotime(date()).'_screenshot.jpg';
-            file_put_contents($file_and_path, $image_data);
-
-        } catch (Exception $exception) {
-            throw new \Exception('No se ha podido obtener la screenshot');
-        }
+        $image_data = $this->getSession()->getDriver()->getScreenshot();
+        $file_and_path = __DIR__ . '/../../screenshots/' . strtotime(date('d-m-Y h:i:s')) . '_screenshot.jpg';
+        file_put_contents($file_and_path, $image_data);
     }
+
 
 }

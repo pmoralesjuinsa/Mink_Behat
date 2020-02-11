@@ -20,3 +20,5 @@ Feature: Scrap behat references from wikipedia
     Scenario: Navigating Wikipedia Spain "Primeros pasos"
       Given I am on "https://es.wikipedia.org/"
       Then I should see "Bienvenidos"
+      When I follow "Primeros pasos"
+      Then I should see "Introducción a Wikipedia"

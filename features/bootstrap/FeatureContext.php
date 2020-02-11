@@ -5,6 +5,7 @@ use Behat\Behat\Context\Context;
 use Behat\MinkExtension\Context\RawMinkContext;
 use Behat\Behat\Context\SnippetAcceptingContext;
 
+
 /**
  * Defines application features from the specific context.
  */

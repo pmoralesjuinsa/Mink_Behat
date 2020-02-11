@@ -12,7 +12,7 @@ default:
         javascript_session: selenium2
 
         sessions:
-          default:
+          goutte:
             goutte: ~
           selenium2:
             selenium2:

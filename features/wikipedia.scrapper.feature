@@ -18,5 +18,5 @@ Feature: Scrap behat references from wikipedia
 
     @primeros_pasos
     Scenario: Navigating Wikipedia Spain "Primeros pasos"
-      Given I am on "es.wikipedia.org"
-      Then I should see "Bienvenidos a Wikipedia,"
+      Given I am on "https://es.wikipedia.org/"
+      Then I should see "Bienvenidos"

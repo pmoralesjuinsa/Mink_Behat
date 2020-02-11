@@ -4,7 +4,7 @@ use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\Context;
 use Behat\MinkExtension\Context\RawMinkContext;
 use Behat\Behat\Context\SnippetAcceptingContext;
-
+use Behat\Mink\Driver\Selenium2Driver;
 
 /**
  * Defines application features from the specific context.

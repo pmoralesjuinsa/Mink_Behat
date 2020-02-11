@@ -17,8 +17,9 @@ Feature: Scrap behat references from wikipedia
     And I save references in a local storage device
 
     @primeros_pasos
+    @javascript
     Scenario: Navigating Wikipedia Spain "Primeros pasos"
-      Given I am on "https://es.wikipedia.org/"
+      Given I am on "https://es.wikipedia.org/wiki/Wikipedia:Portada"
       Then I should see "Bienvenidos"
       When I follow "Primeros pasos"
       Then I should see "Introducción a Wikipedia"

@@ -15,3 +15,8 @@ Feature: Scrap behat references from wikipedia
     And I follow "Behat (computer science)"
     Then I should see "Behat is intended to aid communication between"
     And I save references in a local storage device
+
+    @primeros_pasos
+    Scenario: Navigating Wikipedia Spain "Primeros pasos"
+      Given I am on "es.wikipedia.org"
+      Then I should see "Bienvenidos a Wikipedia,"
